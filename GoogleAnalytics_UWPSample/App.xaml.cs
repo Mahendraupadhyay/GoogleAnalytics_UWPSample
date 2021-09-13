@@ -60,7 +60,7 @@ namespace GoogleAnalytics_UWPSample
                     AnalyticsManager.Current.IsDebug = false; //For debug purpose only, For production it should be false.
                     AnalyticsManager.Current.ReportUncaughtExceptions = true; //To handle catch and send any exception
                     AnalyticsManager.Current.AutoAppLifetimeMonitoring = true; //Might use for Online and online mode.
-
+                    
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter

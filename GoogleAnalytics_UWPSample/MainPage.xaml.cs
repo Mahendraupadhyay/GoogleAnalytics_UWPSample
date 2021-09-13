@@ -30,20 +30,15 @@ namespace GoogleAnalytics_UWPSample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //App.Tracker.ScreenName = "MainPageMahendra";
-            //App.Tracker.Title = "CustomPage111"; 
-            //var hit = HitBuilder.CreateScreenView().Build();
-            //App.Tracker.Send(hit);
+            App.Tracker.ScreenName = "MainPageUWP";
+            App.Tracker.Title = "CustomPageUWP";
+            var hit = HitBuilder.CreateScreenView().Build();
+            App.Tracker.Send(hit);
 
-            var hit1 = HitBuilder.CreateCustomEvent("AB2","BC2",null,0);
-            hit1.SetCustomDimension(2, "Test");
-            App.Tracker.Send(hit1.Build());
+            var hit2 = HitBuilder.CreateCustomEvent("xx", "11", null, 0);
+            hit2 = hit2.SetCustomDimension(2, "z");
+            App.Tracker.Send(hit2.Build());
 
-
-            //HitBuilder hitBuilder = new HitBuilder();
-            //hitBuilder.SetCustomDimension(1, "Dummy");
-           // App.Tracker.Send(HitBuilder.CreateCustomEvent("test22", "userclick22",null, 0).Build());
-          
         }
     }
 }
