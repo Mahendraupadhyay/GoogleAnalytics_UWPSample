@@ -35,8 +35,8 @@ namespace GoogleAnalytics_UWPSample
             var hit = HitBuilder.CreateScreenView().Build();
             App.Tracker.Send(hit);
 
-            var hit2 = HitBuilder.CreateCustomEvent("xx", "11", null, 0);
-            hit2 = hit2.SetCustomDimension(2, "z");
+            var hit2 = HitBuilder.CreateCustomEvent("SampleCatagory","Action1", null, 0);
+            hit2 = hit2.SetCustomDimension(2, "CustomeDimentionVal");
             App.Tracker.Send(hit2.Build());
 
         }

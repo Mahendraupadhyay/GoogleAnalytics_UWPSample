@@ -10,6 +10,9 @@
 
 
     <Grid>
-        <Button Click="Button_Click" Content="Click" />
+        <Button
+            HorizontalAlignment="Center"
+            Click="Button_Click"
+            Content="Click" />
     </Grid>
 </Page>
