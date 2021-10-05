@@ -32,12 +32,20 @@ namespace GoogleAnalytics_UWPSample
         {
             App.Tracker.ScreenName = "MainPageUWP";
             App.Tracker.Title = "CustomPageUWP";
+            App.Tracker.AppId = "121";
+            App.Tracker.AppName = "HPPALETTE";
+            App.Tracker.AppVersion = "1.2.3.0";
+            App.Tracker.AnonymizeIP = true;
+            
             var hit = HitBuilder.CreateScreenView().Build();
             App.Tracker.Send(hit);
 
+            App.Tracker.ScreenName = "NewNameUWP";
             var hit2 = HitBuilder.CreateCustomEvent("SampleCatagory","Action1", null, 0);
             hit2 = hit2.SetCustomDimension(2, "CustomeDimentionVal");
             App.Tracker.Send(hit2.Build());
+
+           
 
         }
     }
